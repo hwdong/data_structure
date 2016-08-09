@@ -152,6 +152,9 @@ b) 如果前驱节点的右孩子为当前节点，将它的右孩子重新设�
 
 3. 重复以上1、2直到当前节点为空。
 */
+
+![](http://images.cnitblog.com/blog/300640/201306/14221458-aa5f9e92cce743ccacbc735048133058.jpg)
+
 ```
 ![](http://images.cnitblog.com/blog/300640/201306/14221458-aa5f9e92cce743ccacbc735048133058.jpg)
 void preorderMorrisTraversal(TreeNode *root) {
