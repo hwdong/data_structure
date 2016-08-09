@@ -2,7 +2,6 @@
 #include <vector>
 #include <stack>
 #include <list>
-#include <queue>
 #include <iostream>
 #include <algorithm>
 using namespace std;
@@ -248,18 +247,7 @@ void postorderMorrisTraversal(TreeNode *root) {
 }
 
 
-void levelOrderTraversal(TreeNode *root) 
-{
-	if (!root) return;
-	queue<TreeNode *> Q;
-	Q.push(root);
-	while (!Q.empty()) {
-		TreeNode *p = Q.front(); Q.pop();
-		std::cout << p->val << " ";
-		if (p->left) Q.push(p->left);
-		if (p->right) Q.push(p->right);
-	}
-}
+
 int main(int argc, char **argv) {
 	TreeNode *root = new TreeNode(1);
 	root->left = new TreeNode(2);
@@ -277,12 +265,53 @@ int main(int argc, char **argv) {
 	preorderTraversal(root);  std::cout << "\n";
 	inorderTraversal(root);  std::cout << "\n";
 	postorderTraversal(root);  std::cout << "\n";
-	postorderTraversal_(root);  std::cout << "\n\n";
-	
-	levelOrderTraversal(root);  std::cout << "\n";
+	postorderTraversal_(root);  std::cout << "\n";
 	return 0;
 }
 ```
 
+/*
+Given a binary tree, return the bottom-up level order traversal of its nodes’ values. (ie, from left to right,
+level by level from leaf to root).
+For example: Given binary tree {3,9,20,#,#,15,7},
+3
+/ \
+9 20
+/ \
+15 7
+return its bottom-up level order traversal as:
+[
+[15,7]
+[9,20],
+[3],
+]
+*/
+```
+void levelOrderTraversal_(TreeNode *root)
+{
+	if (!root) return;
+	vector<vector<int>> result;
+	queue<TreeNode *> Q,Q2;
+	Q.push(root);
+	while (!Q.empty()) {
+		vector<int> vec;
+		while (!Q.empty()) {
+			TreeNode *p = Q.front(); Q.pop();
+			vec.push_back(p->val); //std::cout << p->val << " ";
+			if (p->left) Q2.push(p->left);
+			if (p->right) Q2.push(p->right);
+		}
+		result.push_back(vec);
+		swap(Q, Q2);
+	}
+	for (int i = result.size() - 1; i >= 0; i--) {
+		vector<int> &vec = result[i];
+		for (int j = 0; j < vec.size(); j++)
+			std::cout << vec[j] << " ";
+		std::cout << "\n";
+	}
+}
+
+```
 Refer to :
 [http://www.cnblogs.com/AnnieKim/archive/2013/06/15/morristraversal.html](http://www.cnblogs.com/AnnieKim/archive/2013/06/15/morristraversal.html)
