@@ -2,6 +2,7 @@
 #include <vector>
 #include <stack>
 #include <list>
+#include <queue>
 #include <iostream>
 #include <algorithm>
 using namespace std;
@@ -247,6 +248,18 @@ void postorderMorrisTraversal(TreeNode *root) {
 }
 
 
+void levelOrderTraversal(TreeNode *root) 
+{
+	if (!root) return;
+	queue<TreeNode *> Q;
+	Q.push(root);
+	while (!Q.empty()) {
+		TreeNode *p = Q.front(); Q.pop();
+		std::cout << p->val << " ";
+		if (p->left) Q.push(p->left);
+		if (p->right) Q.push(p->right);
+	}
+}
 int main(int argc, char **argv) {
 	TreeNode *root = new TreeNode(1);
 	root->left = new TreeNode(2);
@@ -264,7 +277,9 @@ int main(int argc, char **argv) {
 	preorderTraversal(root);  std::cout << "\n";
 	inorderTraversal(root);  std::cout << "\n";
 	postorderTraversal(root);  std::cout << "\n";
-	postorderTraversal_(root);  std::cout << "\n";
+	postorderTraversal_(root);  std::cout << "\n\n";
+	
+	levelOrderTraversal(root);  std::cout << "\n";
 	return 0;
 }
 ```
