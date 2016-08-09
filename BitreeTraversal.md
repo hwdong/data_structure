@@ -121,7 +121,7 @@ void inorderMorrisTraversal(TreeNode *root) {
 	TreeNode *p = root,*pre = nullptr;
 	while (p) {
 		if (p->left == nullptr) {//无左子树，输出该结点，走到右子树
-			std::cout << p->val; 
+			std::cout << p->val<< " ";
 			p = p->right;
 		}
 		else {
@@ -134,7 +134,7 @@ void inorderMorrisTraversal(TreeNode *root) {
 				p = p->left;      //走向左孩子
 			}
 			else { //左子树走完，输出该结点
-				std::cout << p->val;
+				std::cout << p->val<< " ";
 				pre->right = nullptr; //断开前驱结点的右线索
 				p = p->right;    //走向右孩子
 			}			
@@ -166,7 +166,7 @@ void preorderMorrisTraversal(TreeNode *root) {
 	TreeNode *p = root, *pre = nullptr;
 	while (p) {		
 		if (p->left == nullptr) {//无左子树，输出该结点，走到右子树
-			std::cout << p->val;
+			std::cout << p->val<< " ";
 			p = p->right;
 		}
 		else {
@@ -175,7 +175,7 @@ void preorderMorrisTraversal(TreeNode *root) {
 				pre = pre->right;
 			}
 			if (pre->right == nullptr) {
-				std::cout << p->val;  //进入左子树前，输出该结点
+				std::cout << p->val<< " ";  //进入左子树前，输出该结点
 				pre->right = p;   //建立前驱结点的右线索
 				p = p->left;      //走向左孩子
 			}
