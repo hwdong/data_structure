@@ -12,6 +12,8 @@ struct TreeNode {
 	TreeNode(int x=-1, TreeNode *l= nullptr, TreeNode *r= nullptr)
 		: val(x), left(l), right(r) { }
 };
+
+//---------------Stack based  binary tree  traversal, time  complexity O(n),space complexity O(logn) or O(n) ------
 void preorderTraversal(TreeNode *root) {
 	if (!root) return;
 	stack<TreeNode *> S;
@@ -93,6 +95,8 @@ vector<int> postorderTraversal_(TreeNode *root) {
 
 ```
 
+
+//---------------Morris  traversal, time  complexity O(n),space complexity O(1)------
 
 /*
 Morris中序步骤：
