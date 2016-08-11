@@ -98,7 +98,7 @@ void AllPermutation_unique(vector<int> &a, const int pos) {
 		if (visited.find(a[i]) == visited.end()) {
 			visited[a[i]] = true;
 			swap(a[pos], a[i]); //select a[i] to pos location 
-			AllPermutation(a, pos + 1);
+			AllPermutation_unique(a, pos + 1);
 			swap(a[pos], a[i]); //restore to the state before selecting a[i] as a[pos] 
 		}
 	}
