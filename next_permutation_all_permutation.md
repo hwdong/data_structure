@@ -58,8 +58,8 @@ int main() {
 }
 ```
 
-We can also get all permution by  multiplication rule（乘法原理）  
-![](http://img.blog.csdn.net/20131214161358218?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbTY4MzAwOTg=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+We can also get all permution by  multiplication rule（乘法原理）   
+![](http://img.blog.csdn.net/20131214161358218?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbTY4MzAwOTg=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)  
 
 ```
 void AllPermutation(vector<int> &a, const int pos) {
