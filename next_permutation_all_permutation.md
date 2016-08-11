@@ -57,8 +57,8 @@ int main() {
 	return 0;
 }
 ```
-
-We can also get all permution by  multiplication rule（乘法原理）   
+**All Permutations **
+We can also get all permutation by  multiplication rule（乘法原理）   
 ![](http://img.blog.csdn.net/20131214161358218?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbTY4MzAwOTg=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)  
 
 ```
@@ -75,6 +75,34 @@ void AllPermutation(vector<int> &a, const int pos) {
 	}
 }
 ```
-  
+
+**Permutations II**
+/*
+Given a collection of numbers that might contain duplicates, return all possible unique permutations.
+
+For example, [1, 1, 2] have the following unique permutations : [1, 1, 2], [1, 2, 1], and[2, 1, 1].
+*/
+
+**Solution**: when we choose one a[i] from remaining nums to the pos location, we shouldn't choose the same value more than once.
+
+For example ,if we try a[j] to pos, thre should be no a[i] between [pos,j] has the same value with a[j]!So we just use a hash table to do this.
+```
+#include<unordered_map>
+void AllPermutation_unique(vector<int> &a, const int pos) {
+	if (pos == a.size() - 1) {
+		for (auto value : a) std::cout << value << " "; std::cout << "\n";
+		return;
+	}
+	unordered_map<int, bool> visited; //record if ele in range[pos,n] has been visited
+	for (int i = pos; i < a.size(); i++) {
+		if (visited.find(a[i]) == visited.end()) {
+			visited[a[i]] = true;
+			swap(a[pos], a[i]); //select a[i] to pos location 
+			AllPermutation(a, pos + 1);
+			swap(a[pos], a[i]); //restore to the state before selecting a[i] as a[pos] 
+		}
+	}
+}
+```
 Refer to:
 //http://blog.csdn.net/m6830098/article/details/17291259
