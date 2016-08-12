@@ -53,6 +53,6 @@ int main() {
 	std::cout << MaximumSubarray_(nums) << std::endl;
 	return 0;
 }
-
-//http://www.kancloud.cn/kancloud/data-structure-and-algorithm-notes/73086
 ```
+//http://www.kancloud.cn/kancloud/data-structure-and-algorithm-notes/73086
+
