@@ -86,9 +86,10 @@ For example, [1, 1, 2] have the following unique permutations : [1, 1, 2], [1, 2
 
 **Solution**: when we choose one a[i] from remaining nums to the pos location, we shouldn't choose the same value more than once.
 
-For example ,if we try a[j] to pos, thre should be no a[i] between [pos,j] has the same value with a[j]!So we just use a hash table to do this.
+For example ,if we try a[j] to pos, there should be no a[i] between [pos,j] has the same value with a[j]!So we just use a hash table to do this.
 ```
 #include<unordered_map>
+// choose a element among [pos,n]  to pos position
 void AllPermutation_unique(vector<int> &a, const int pos) {
 	if (pos == a.size() - 1) {
 		for (auto value : a) std::cout << value << " "; std::cout << "\n";
