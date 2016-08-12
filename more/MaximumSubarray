@@ -18,6 +18,11 @@ Can you do it in time complexity O(n)?
 #include <algorithm>
 using namespace std; 
 
+/*  
+用Sub表示当前子数组和，maxSub表示求得的最大子数组和。当Sub <= 0时，累加数组中的元素只会使得到的和更小，故此时应将此部分和丢弃，  
+使用此时遍历到的数组元素替代。需要注意的是由于有maxSub更新sub, 故直接丢弃小于0的sub并不会对最终结果有影响。 
+即不会漏掉前面的和比后面的元素大的情况。
+*/
 int MaximumSubarray(vector<int>& nums) {
 	int maxSub = INT_MIN,Sub= 0;
 	for (auto a : nums) {
