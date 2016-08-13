@@ -19,13 +19,9 @@ Can you do it in time complexity O(n)?
 using namespace std; 
 
 /*  
-动态规划：对于遍历遇到的每个数组元素a = S[j],用Sub表示截止到其前一个元素S[j-1]时的当前子数组和,此时又两种选择: a是否要加入到当前子数组和Sub:  
-1) 当Sub <= 0时，累加数组中的元素只会使得到的和更小，故此时应将此部分和丢弃,以a开头重新计算
-2) 当Sub> 0时,将a累加到Sub.
-设状态f[j]记录以 S[j]为结尾的最大连续子序列和，则：
+动态规划：设状态f[j]记录以 S[j]为结尾的最大连续子序列和，则：
      f[j] = max { f[j - 1] + S[j], S[j]} ;   1<=j<=n  
      target = max { f[j]} ;   1<=j<=n
-
 */
 int MaximumSubarray(vector<int>& nums) {
 	int maxSub = INT_MIN,Sub= 0;
