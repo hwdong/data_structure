@@ -11,5 +11,6 @@ Given height = [2,1,5,6,2,3],
 return 10.  
 
 
+![](http://d1gjlxt8vb0knt.cloudfront.net//wp-content/uploads/histogram1.png)
 
 //http://www.geeksforgeeks.org/largest-rectangle-under-histogram/
