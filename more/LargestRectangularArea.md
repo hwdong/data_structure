@@ -13,7 +13,10 @@ return 10.
 
 ![](http://d1gjlxt8vb0knt.cloudfront.net//wp-content/uploads/histogram1.png)  
 
-/*
+算法思想：
+   For every bar ‘x’, we calculate the area with ‘x’ as the smallest bar in the rectangle. If we calculate such area for every bar ‘x’ and find the maximum of all areas, our task is done. How to calculate area with ‘x’ as smallest bar? We need to know index of the first smaller (smaller than ‘x’) bar on left of ‘x’ and index of first smaller bar on right of ‘x’. Let us call these indexes as ‘left index’ and ‘right index’ respectively.
+   
+算法过程：  
 1) Create an empty stack.
 
 2) Start from first bar, and do following for every bar ‘hist[i]’ where ‘i’ varies from 0 to n-1.  
@@ -21,7 +24,8 @@ return 10.
 ……b) If this bar is smaller than the top of stack, then keep removing the top of stack while top of the stack is greater. Let the removed bar be hist[tp]. Calculate area of rectangle with hist[tp] as smallest bar. For hist[tp], the ‘left index’ is previous (previous to tp) item in stack and ‘right index’ is ‘i’ (current index). 
 
 3) If the stack is not empty, then one by one remove all bars from stack and do step 2.b for every removed bar.
-*/
+
+
 下面给出栈的变化情况（注意：程序中栈存储的实际是hist数组的元素下标，而图示直接用对应的数组元素演示栈的变换情况！）
 ```
 i=0,                  , S = |6|  
