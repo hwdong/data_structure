@@ -21,7 +21,8 @@ I then wrote the following code after I observed the 规律。
 0   1      10   11   100   101        110  111  1000  1001  1010 1011 1100   
 
 The idea is similar to the compute of gray code: 计算长度按照1 ,2 ,4, 8递增。
-后一遍的结果 是 前面的结果+1, 并累加到前面结果后面
+后一遍的结果 是 前面的结果+1, 并累加到前面结果后面.   
+时间复杂度为O(n)
 */
 vector<int>  CountingBits(const int num) {
 	vector<int> res;
