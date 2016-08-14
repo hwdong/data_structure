@@ -10,7 +10,7 @@ The idea is similar to the compute of gray code: 计算长度按照1 ,2 ,4, 8递
 */
 vector<int>  CountingBits(const int num) {
 	vector<int> res;
-	res.reserve(num);
+	res.reserve(num+1);
 	res.push_back(0);
 	while (res.size() <= num) {
 		int n = res.size();
