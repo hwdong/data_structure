@@ -24,6 +24,8 @@ Return
 	}
 	return low > high;
 }
+//对[pos,s.size()-1]之间进行DFS递归，partition记录从根深度前进过程中发现的每个回文（即一条完整的分割），直到到达叶子节点。
+//所有深度路径上的回文序列都放入res中。
 void PalindromePartitioning(string S, const int pos, vector<string> &partition,
 	vector<vector<string>> &res) 
 {
