@@ -54,5 +54,23 @@ int main() {
 	return 0;
 }
 ```
-解法2（动态规划）： 采用https://github.com/hwdong/data_structure/blob/master/more/LongestPalindromicSubstring.md的代码
+解法2（动态规划）： 采用[Longest Palindromic Substring](https://github.com/hwdong/data_structure/blob/master/more/LongestPalindromicSubstring.md)的代码
   
+
+**Palindrome Partitioning II**
+Given a string s, partition s such that every substring of the partition is a palindrome.  
+
+Return the minimum cuts needed for a palindrome partitioning of s.  
+
+For example, given s = "aab",  
+Return 1 since the palindrome partitioning ["aa","b"] could be produced using 1 cut.  
+
+用2次动态规划：
+   第1次用动态规划，判断[i,j]时间是否是回文，见[Longest Palindromic Substring](https://github.com/hwdong/data_structure/blob/master/more/LongestPalindromicSubstring.md)
+   第2次用动态规划求最小cut数：设f[i]表示[0, i-1] 之间的最小Cut数，则   
+        f[i] = min{ f[j]}+1 ,  0<=j<=i-1;
+```
+```
+
+Refer to :
+   http://bangbingsyb.blogspot.com/2014/11/leetcode-palindrome-partitioning-i-ii.html
