@@ -54,3 +54,24 @@ i=6, S.push(hist[6]) ,  S = |1|,
      S.Pop(),           S = |1|,  area = 1*(7)  = 7
 ```
 //http://www.geeksforgeeks.org/largest-rectangle-under-histogram/
+
+--------------------------------------------------------
+**Maximal Rectangle**
+```
+Given a 2D binary matrix filled with 0's and 1's, find the largest rectangle containing all ones and return its area.
+```
+例如
+```
+    0 0 0 0
+    1 1 1 1
+    1 1 1 0
+    0 1 0 0
+```
+```
+    0  0  0  0
+   |--------|
+   |1  1  1 |1
+   |1  1  1 |0
+   |--------|
+    0  1  0  0
+```
