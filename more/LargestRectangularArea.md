@@ -25,14 +25,21 @@ return 10.
 
 ```
 i=0,                  , S = |6|  
-i=1, S.Pop(),         , S = | |, area = 6*1 = 6;      
+i=1, S.Pop(),         , S = | |, area = 6*1 = 6;
+
      S.push(hist[1]) ,  S = |2|,    
                             |5|  
-i=2, S.push(hist[2]) ,  S = |2|,  
+i=2, S.push(hist[2]) ,  S = |2|, 
+
 1=3, S.Pop(),           S = |2|, area = 5*1 = 5;  
                             |4|  
-     S.push(hist[3]) ,  S = |2|,    
+     S.push(hist[3]) ,  S = |2|, 
      
-     
+                            |5|       
+                            |4|  
+i=4, S.push(hist[4]) ,  S = |2|,   
+1=5, S.Pop(),  
+     S.Pop(),
+     S.Pop(),           S = | |,  area = 4*(5-1+1) 
 ```
 //http://www.geeksforgeeks.org/largest-rectangle-under-histogram/
