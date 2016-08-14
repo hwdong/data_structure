@@ -46,5 +46,7 @@ i=5, S.Pop(),               |4|
      S.push(hist[5]) ,  S = |1|, 
                         S = |6|,
 i=6, S.push(hist[6]) ,  S = |1|,   
+     S.Pop(),           S = |1|,  area = 6*(7-5-1)  = 6
+     S.Pop(),           S = |1|,  area = 1*(7)  = 7
 ```
 //http://www.geeksforgeeks.org/largest-rectangle-under-histogram/
