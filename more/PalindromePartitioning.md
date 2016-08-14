@@ -67,8 +67,10 @@ Return 1 since the palindrome partitioning ["aa","b"] could be produced using 1 
 
 用2次动态规划：
    第1次用动态规划，判断[i,j]时间是否是回文，见[Longest Palindromic Substring](https://github.com/hwdong/data_structure/blob/master/more/LongestPalindromicSubstring.md)
+   
    第2次用动态规划求最小cut数：设f[i]表示[0, i-1] 之间的最小Cut数，则   
         f[i] = min{ f[j]}+1 ,  0<=j<=i-1;
+        
 ```
 ```
 
