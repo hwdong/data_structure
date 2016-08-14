@@ -23,8 +23,8 @@ return 10.
 3) If the stack is not empty, then one by one remove all bars from stack and do step 2.b for every removed bar.
 */
 
-i=0,                   S = |6|  
-i=1, S.Pop(),          S = | |, area = 6*1 = 6;    
-     S.push(hist[1])   S = |2|,  
+i=0,    &nbsp&nbsp&nbsp&nbsp&nbsp               S = |6|  
+i=1, S.Pop(), &nbsp&nbsp         S = | |, area = 6*1 = 6;    
+     S.push(hist[1]) &nbsp&nbsp&nbsp  S = |2|,  
 
 //http://www.geeksforgeeks.org/largest-rectangle-under-histogram/
