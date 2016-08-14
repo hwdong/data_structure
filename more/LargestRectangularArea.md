@@ -79,3 +79,4 @@ Given a 2D binary matrix filled with 0's and 1's, find the largest rectangle con
 如上述例子中，第1行的直方图是 (0 0 0 0 ),第2行的直方图是 (1 1 1 1 ),第3行的直方图是 (2 2 2 0 ),第4行的直方图是 (0 3 0 0 )
 
 http://liangjiabin.com/blog/2015/04/leetcode-maximal-rectangle.html
+http://leetcode.tanglei.name/content/matrix/Maximal-Rectangle.html
