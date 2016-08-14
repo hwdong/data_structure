@@ -38,8 +38,10 @@ i=2, S.push(hist[2]) ,  S = |2|,
                             |5|       
                             |4|  
 i=4, S.push(hist[4]) ,  S = |2|,   
-1=5, S.Pop(),  
-     S.Pop(),
-     S.Pop(),           S = | |,  area = 4*(5-1-1)  = 12
+1=5, S.Pop(),               |4| 
+                        S = |2|,  area = 5*(5-3-1)  = 5        
+                           
+     S.Pop(),           S = |2|,  area = 4*(5-1-1)  = 12       
+     S.Pop(),           S = | |,  area = 2*(5)  = 10
 ```
 //http://www.geeksforgeeks.org/largest-rectangle-under-histogram/
