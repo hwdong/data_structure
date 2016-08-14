@@ -13,10 +13,10 @@ return 10.
 
 ![](http://d1gjlxt8vb0knt.cloudfront.net//wp-content/uploads/histogram1.png)  
 
-算法思想：
-   For every bar ‘x’, we calculate the area with ‘x’ as the smallest bar in the rectangle. If we calculate such area for every bar ‘x’ and find the maximum of all areas, our task is done. How to calculate area with ‘x’ as smallest bar? We need to know index of the first smaller (smaller than ‘x’) bar on left of ‘x’ and index of first smaller bar on right of ‘x’. Let us call these indexes as ‘left index’ and ‘right index’ respectively.
+**算法思想**：
+   *For every bar ‘x’, we calculate the area with ‘x’ as the smallest bar in the rectangle*. If we calculate such area for every bar ‘x’ and find the maximum of all areas, our task is done. How to calculate area with ‘x’ as smallest bar? We need to know index of the first smaller (smaller than ‘x’) bar on left of ‘x’ and index of first smaller bar on right of ‘x’. Let us call these indexes as ‘left index’ and ‘right index’ respectively.
    
-算法过程：  
+**算法过程**：  
 1) Create an empty stack.
 
 2) Start from first bar, and do following for every bar ‘hist[i]’ where ‘i’ varies from 0 to n-1.  
