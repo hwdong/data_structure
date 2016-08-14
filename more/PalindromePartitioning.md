@@ -54,3 +54,5 @@ int main() {
 	return 0;
 }
 ```
+解法2（动态规划）： 采用https://github.com/hwdong/data_structure/blob/master/more/LongestPalindromicSubstring.md的代码
+  
