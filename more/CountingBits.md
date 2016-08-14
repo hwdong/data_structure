@@ -44,7 +44,7 @@ void main_CountingBits() {
 }
 ```
 
-He also give a code :
+He also gives a code :
 ```
 vector<int>  CountingBits_(const int num) {
 	vector<int> res(num+1);
