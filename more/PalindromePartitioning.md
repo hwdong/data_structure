@@ -65,7 +65,9 @@ Return the minimum cuts needed for a palindrome partitioning of s.
 For example, given s = "aab",  
 Return 1 since the palindrome partitioning ["aa","b"] could be produced using 1 cut.  
 
-用2次动态规划：
+
+***用2次动态规划***：
+
    第1次用动态规划，判断[i,j]时间是否是回文，见[Longest Palindromic Substring](https://github.com/hwdong/data_structure/blob/master/more/LongestPalindromicSubstring.md)
    
    第2次用动态规划求最小cut数：设f[i]表示[0, i-1] 之间的最小Cut数，则   
