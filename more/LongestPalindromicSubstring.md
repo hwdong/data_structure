@@ -41,7 +41,7 @@ string longestPalindrome(string s)
 			  | true                      , j==i;
 	 f(i,j) = | S[i]=S[j]                 , j==i+1;
 			  | S[i]=S[j] && f(i+1,j-1)   , j>i+1;
-时间复杂度O(n ^ 2)，空间O（1）
+时间复杂度O(n ^ 2)，空间O（n）
 */
 string longestPalindrome_(const string& s) {
 	const int n = s.size();
