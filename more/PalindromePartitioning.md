@@ -55,6 +55,7 @@ int main() {
 }
 ```
 解法2（动态规划）： 采用[Longest Palindromic Substring](https://github.com/hwdong/data_structure/blob/master/more/LongestPalindromicSubstring.md)的代码
+
   
 
 **Palindrome Partitioning II**
