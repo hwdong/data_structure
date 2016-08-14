@@ -25,7 +25,7 @@ return 10.
 
 3) If the stack is not empty, then one by one remove all bars from stack and do step 2.b for every removed bar.
 
-
+**算法演示**：
 下面给出栈的变化情况（注意：程序中栈存储的实际是hist数组的元素下标，而图示直接用对应的数组元素演示栈的变换情况！）
 ```
 i=0,                  , S = |6|  
