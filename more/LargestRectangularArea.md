@@ -113,11 +113,10 @@ int maximalRectangle(vector<vector<char> > &matrix) {
     for (int i = 0; i < m; i++)      {  
         maxL = 0, minR = n-1;  
         for (int j = 0; j < n; j++)    {  
-            if (matrix[i][j] == '0')    {  
-                h[j] = 0;  
-                l[j] = 0;  
-                r[j] = n - 1;  
+            if (matrix[i][j] == '0')    { 
                 maxL = j + 1;  
+                h[j] = 0;          l[j] = 0;          r[j] = n - 1;  
+               
             }  
             else  {  
                 h[j]++;  
@@ -127,8 +126,8 @@ int maximalRectangle(vector<vector<char> > &matrix) {
           
         for (int j = n - 1; j >= 0; j--)  {  
             if (matrix[i][j] == '0')  {  
-                r[j] = n - 1;  
                 minR = j - 1;  
+                r[j] = n - 1; 
             }  
             else  {  
                 r[j] = min(r[j], minR);  
