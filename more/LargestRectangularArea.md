@@ -99,8 +99,53 @@ Given a 2D binary matrix filled with 0's and 1's, find the largest rectangle con
       R[j]:  3             1             3,minR = 1    3,minR = 2    
       
 ```
-
-
+代码如下：
+```
+int maximalRectangle(vector<vector<char> > &matrix) {  
+    int m = matrix.size();  
+    if (m == 0) return 0;  
+    int n = matrix[0].size();  
+    if (n == 0) return 0;  
+    vector<int> h(n);  
+    vector<int> l(n);  
+    vector<int> r(n, n - 1);  
+    int maxArea = 0, maxL = 0, minR = m - 1;  
+    for (int i = 0; i < m; i++)  
+    {  
+        maxL = 0, minR = n-1;  
+        for (int j = 0; j < n; j++)  
+        {  
+            if (matrix[i][j] == '0')  
+            {  
+                h[j] = 0;  
+                l[j] = 0;  
+                r[j] = n - 1;  
+                maxL = j + 1;  
+            }  
+            else  
+            {  
+                h[j]++;  
+                l[j] = max(l[j], maxL);  
+            }  
+        }  
+          
+        for (int j = n - 1; j >= 0; j--)  
+        {  
+            if (matrix[i][j] == '0')  
+            {  
+                r[j] = n - 1;  
+                minR = j - 1;  
+            }  
+            else  
+            {  
+                r[j] = min(r[j], minR);  
+                maxArea = max(maxArea, h[j] * (r[j] - l[j] + 1));  
+            }  
+        }  
+    }  
+    return maxArea;  
+}  
+```
 
 http://blog.csdn.net/PeerlessBloom/article/details/39648359
 
