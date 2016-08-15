@@ -29,7 +29,7 @@ Opt(V`，i) = MAX{   B(i)*H(i) + Opt(V`- B(i)*V(i), i-1)  }
 每一种的满意度     arrH[] = {3, 5, 2};
 每种的容量            arrV[] = {2, 4, 8}
 
-代码示例：
+动态规划之递推法，代码示例：
 ```
 #include <iostream>
 #include <iomanip> 
@@ -105,6 +105,6 @@ void main()
     cin >> nHappy;
 }
 ```
-
+动态规划之备忘录法，代码示例：
 
 http://www.cnblogs.com/gaopeng527/p/4604079.html 
