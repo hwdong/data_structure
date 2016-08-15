@@ -78,6 +78,8 @@ Given a 2D binary matrix filled with 0's and 1's, find the largest rectangle con
 直方图解法就是对于矩阵的每一行，，计算以这行为底的直方图（即该行每个‘1’字符上面有多少个连续的'1'）。然后用*Largest Rectangular Area*中的方法计算该行对应直方图中的最大矩形。 对每一行重复这一过程！
 如上述例子中，第1行的直方图是 (0 0 0 0 ),第2行的直方图是 (1 1 1 1 ),第3行的直方图是 (2 2 2 0 ),第4行的直方图是 (0 3 0 0 )
 
+
 http://blog.csdn.net/PeerlessBloom/article/details/39648359
+
 http://liangjiabin.com/blog/2015/04/leetcode-maximal-rectangle.html
 http://leetcode.tanglei.name/content/matrix/Maximal-Rectangle.html
