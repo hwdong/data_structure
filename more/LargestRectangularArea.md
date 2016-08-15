@@ -116,7 +116,6 @@ int maximalRectangle(vector<vector<char> > &matrix) {
             if (matrix[i][j] == '0')    { 
                 maxL = j + 1;  
                 h[j] = 0;          l[j] = 0;          r[j] = n - 1;  
-               
             }  
             else  {  
                 h[j]++;  
