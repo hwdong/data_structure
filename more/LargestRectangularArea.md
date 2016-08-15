@@ -85,18 +85,18 @@ Given a 2D binary matrix filled with 0's and 1's, find the largest rectangle con
   m = 4, n = 4
   maxL = 0, minR = n-1=3;
   
- i=0: H[j]:  0    0    0    0
-      L[j]:  0    0    0    0
-      R[j]:  3    3    3    3 
- i=1: H[j]:  1    1    1    1
-      L[j]:  0    0    0    0
-      R[j]:  3    3    3    3 
- i=2: H[j]:  2    2    2    0
-      L[j]:  0    0    0    0,maxL = 4
-      R[j]:  2    2    2    3,minR = 2
- i=2: H[j]:  0             3    0             0
-      L[j]:  0,maxL = 1    1    0,maxL = 3    0,maxL = 4
-      R[j]:  3             1    3,minR = 1    3,minR = 2    
+ i=0: H[j]:  0             0             0             0
+      L[j]:  0             0             0             0
+      R[j]:  3             3             3             3 
+ i=1: H[j]:  1             1             1             1
+      L[j]:  0             0             0             0
+      R[j]:  3             3             3             3 
+ i=2: H[j]:  2             2             2             0
+      L[j]:  0             0             0             0,maxL = 4
+      R[j]:  2             2             2             3,minR = 2
+ i=2: H[j]:  0             3             0             0
+      L[j]:  0,maxL = 1    1             0,maxL = 3    0,maxL = 4
+      R[j]:  3             1             3,minR = 1    3,minR = 2    
       
 ```
 
