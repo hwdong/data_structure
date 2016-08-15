@@ -106,5 +106,40 @@ void main()
 }
 ```
 动态规划之备忘录法，代码示例：
-
+```
+ //opt[v][i]表示从i,...,t种饮料中，算出总容量为v的方案的满意度之和的最大值
+ int[][] opt; //子问题的记录项表，初始化时opt中存储值为-1，表示该子问题尚未求解
+ int Calc(int v, int t){
+       int i,j;
+       if(!opt){
+           opt = new int[V0+1][T+1];
+           memset(opt, -1, sizeof(int) * (V0+1)*(T+1));
+       }
+       
+       if(t == T){
+            if(v == 0)
+                return 0;
+            else
+                return -INF;
+       }
+       if(v < 0)
+            return -INF;
+       else if(v == 0)
+            return 0;
+       else if(opt[v][t]!=-1){ //该子问题已求解，直接返回子问题的解
+            return opt[v][t];  
+       }
+        //子问题尚未求解，则求解子问题
+        int result = -INF;
+        for(i=0;i<count[t];i++){
+            int temp = Calc(v-i*V[t],t+1);
+            if(temp != INF){
+                temp += i*h[t];
+                if(temp>result)
+                    result = temp;
+            }
+        }
+        return opt[v][t] = result;
+ }
+```
 http://www.cnblogs.com/gaopeng527/p/4604079.html 
