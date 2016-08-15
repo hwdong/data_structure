@@ -50,10 +50,8 @@ void printOpt(int arr[V0+1][T+1], int nLeni, int nLenj)
     int i =0, j = 0;
 
     cout << "=================================" << endl;
-    for (i = 0; i < nLeni; i++)
-    {
-        for (j = 0; j < nLenj; j++)
-        {
+    for (i = 0; i < nLeni; i++)    {
+        for (j = 0; j < nLenj; j++)   {
             cout.fill(' ');  
             cout.setf(ios::right);  
             cout.width(6);  
@@ -72,28 +70,22 @@ int Calc(int V)
 
     memset(opt, 0, sizeof(int) * (V0+1)*(T+1));
     opt[0][T] = 0;
-    for (i = 1; i <= V0; i++)
-    {
+    for (i = 1; i <= V0; i++)    {
         opt[i][T] = -INF;
     }
     printOpt(opt, V0+1, T+1);
 
-    for (j = T-1; j >=0; j--)
-    {
-        for (i = 0; i <= V0; i++)
-        {
+    for (j = T-1; j >=0; j--)    {
+        for (i = 0; i <= V0; i++)    {
             opt[i][j] = -INF;
-            for (k = 0; k < arrC[j]; k++)
-            {
+            for (k = 0; k < arrC[j]; k++)      {
                 if (i < k * arrV[j])
                     break;
 
                 int h = opt[i - k * arrV[j]][j+1];
-                if (h != -INF)
-                {
+                if (h != -INF)     {
                     h += arrH[j] * k;
-                    if (h > opt[i][j])
-                    {
+                    if (h > opt[i][j])       {
                         opt[i][j] = h;
                         printOpt(opt, V0+1, T+1);
                     }
@@ -108,11 +100,8 @@ int Calc(int V)
 void main()
 {
     int nHappy = 0;
-
     nHappy = Calc(V0);
-
     cout << nHappy << endl;
-
     cin >> nHappy;
 }
 ```
