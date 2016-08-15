@@ -115,22 +115,23 @@ int maximalRectangle(vector<vector<char> > &matrix) {
         maxL = 0, minR = n-1;  
         for (int j = 0; j < n; j++)    {  
             if (matrix[i][j] == '0')    { 
-                maxL = j + 1;  
+                maxL = j + 1;     //右边元素的矩形的最左边界从j+1开始
                 h[j] = 0;          l[j] = 0;          r[j] = n - 1;  
             }  
             else  {  
                 h[j]++;  
-                l[j] = max(l[j], maxL);  
+                l[j] = max(l[j], maxL);  //元素[i][j]对应矩形的最左边界 :上一行该列元素[i-1][j]对应矩形的最左边界 和 
+                                         //                               本行当前的最左边界，两者取最大值
             }  
         }  
           
         for (int j = n - 1; j >= 0; j--)  {  
             if (matrix[i][j] == '0')  {  
-                minR = j - 1;  
+                minR = j - 1;  //左边元素的矩形的最右边界从j-1开始
                 r[j] = n - 1; 
             }  
             else  {  
-                r[j] = min(r[j], minR);  
+                r[j] = min(r[j], minR);  //上一行该列元素的最右边界和本行目前最右边界，两者的最小值，作为该元素的最右边界
                 maxArea = max(maxArea, h[j] * (r[j] - l[j] + 1));  
             }  
         }  
