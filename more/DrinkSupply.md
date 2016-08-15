@@ -108,7 +108,8 @@ void main()
 动态规划之备忘录法，代码示例：
 ```
  //opt[v][i]表示从i,...,t种饮料中，算出总容量为v的方案的满意度之和的最大值
-vector<vector<int>> opt; //子问题的记录项表，初始化时opt中存储值为-1，表示该子问题尚未求解
+ vector<vector<int>> opt; //子问题的记录项表，初始化时opt中存储值为-1，表示该子问题尚未求解
+// vector<vector<int>> opt= vector<vector<int>>(V0+1,vector<int>(T+1,-1));
  int Calc(int v, int t){
        if(t == T){
             if(v == 0)
