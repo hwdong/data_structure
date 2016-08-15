@@ -110,8 +110,6 @@ void main()
  //opt[v][i]表示从i,...,t种饮料中，算出总容量为v的方案的满意度之和的最大值
 vector<vector<int>> opt; //子问题的记录项表，初始化时opt中存储值为-1，表示该子问题尚未求解
  int Calc(int v, int t){
-       int i,j;
-       
        if(t == T){
             if(v == 0)
                 return 0;
