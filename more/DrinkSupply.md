@@ -31,6 +31,90 @@ Opt(V`，i) = MAX{   B(i)*H(i) + Opt(V`- B(i)*V(i), i-1)  }
 
 代码示例：
 ```
+#include <iostream>
+#include <iomanip> 
+
+using namespace std;
+
+#define V0 8
+#define T  3
+#define INF 255
+
+
+int arrC[] = {5, 4, 6};
+int arrH[] = {3, 5, 2};
+int arrV[] = {2, 4, 8};
+
+void printOpt(int arr[V0+1][T+1], int nLeni, int nLenj)
+{
+    int i =0, j = 0;
+
+    cout << "=================================" << endl;
+    for (i = 0; i < nLeni; i++)
+    {
+        for (j = 0; j < nLenj; j++)
+        {
+            cout.fill(' ');  
+            cout.setf(ios::right);  
+            cout.width(6);  
+            cout << setprecision(6) << arr[i][j] << "  ";
+        }
+        cout << endl;
+    }
+    cout << endl;
+    cout << endl;
+}
+
+int Calc(int V)
+{
+    int i=0, j=0, k=0;
+    int opt[V0+1][T+1];
+
+    memset(opt, 0, sizeof(int) * (V0+1)*(T+1));
+    opt[0][T] = 0;
+    for (i = 1; i <= V0; i++)
+    {
+        opt[i][T] = -INF;
+    }
+    printOpt(opt, V0+1, T+1);
+
+    for (j = T-1; j >=0; j--)
+    {
+        for (i = 0; i <= V0; i++)
+        {
+            opt[i][j] = -INF;
+            for (k = 0; k < arrC[j]; k++)
+            {
+                if (i < k * arrV[j])
+                    break;
+
+                int h = opt[i - k * arrV[j]][j+1];
+                if (h != -INF)
+                {
+                    h += arrH[j] * k;
+                    if (h > opt[i][j])
+                    {
+                        opt[i][j] = h;
+                        printOpt(opt, V0+1, T+1);
+                    }
+                }
+            }
+        }
+    }
+    printOpt(opt, V0+1, T+1);
+    return opt[V0][0];
+}
+
+void main()
+{
+    int nHappy = 0;
+
+    nHappy = Calc(V0);
+
+    cout << nHappy << endl;
+
+    cin >> nHappy;
+}
 ```
 
 
