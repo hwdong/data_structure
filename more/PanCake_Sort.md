@@ -21,7 +21,7 @@ http://www.youtube.com/embed/kk-_DDgoXfk
 
 *简单排序*：
 
-找出N个数种最大者，将这通过两次翻转放置到最底部，然后处理N-1，N-2等，直到全部排序完，所以一共需要交换2（N-1）次
+找出N个数种最大者，将这通过**两次**翻转放置到最底部，然后处理N-1，N-2等，直到全部排序完，所以一共需要交换2（N-1）次
 
 ```
 void reverse(int cakes[], int beg, int end)
