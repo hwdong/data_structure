@@ -1,4 +1,4 @@
-**PanCake_Sort （一摞烙饼的排序问题）**
+**PanCake_Sort （一摞烙饼的排序）**
 http://www.geeksforgeeks.org/pancake-sorting/
 
 Given an an unsorted array, sort the given array. You are allowed to do only following operation on array.
