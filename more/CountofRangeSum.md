@@ -13,3 +13,6 @@ Solution:
 
 https://discuss.leetcode.com/topic/33738/share-my-solution   
 https://www.hrwhisper.me/leetcode-count-of-range-sum/ 
+
+https://www.topcoder.com/community/data-science/data-science-tutorials/binary-indexed-trees/ 
+https://www.hackerearth.com/notes/binary-indexed-tree-or-fenwick-tree/
